@@ -90,7 +90,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('rh_funcionario') }}" class="nav-link">
+                            <a href="{{ route('rh_funcionario') }}" class="nav-link {{ request()->routeIs('rh_funcionario') ? 'active': '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Funcionário</p>
                             </a>

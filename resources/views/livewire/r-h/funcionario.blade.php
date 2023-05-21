@@ -3,7 +3,7 @@
         <div class="col">
             <div class="card">
                 <div class="card-header d-flex">
-                    <h6 class="m-0">Lista de férias agendadas</h6>
+                    <h6 class="m-0">Lista de colaboradores</h6>
                     <a href="#" class="btn btn-sm btn-link text-decoration-none py-0 float-right" data-toggle="modal"
                         data-target="#funcionario" title="agendar ferias">
                         <i class="fas fa-plus"></i>
@@ -67,11 +67,11 @@
 
     <div class="modal fade" id="funcionario" data-backdrop="static" data-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
             <div class="modal-content">
 
                 <div class="card-body">
-                    <h4>Formulário informções funcionário</h4>
+                    <h4>Formulário informções colaborador</h4>
                     <ul class="nav nav-tabs" id="custom-content-below-tab" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" id="custom-content-below-home-tab" data-toggle="pill"
@@ -92,41 +92,47 @@
                         <li class="nav-item">
                             <a class="nav-link" id="custom-content-below-settings-tab" data-toggle="pill"
                                 href="#custom-content-below-settings" role="tab"
-                                aria-controls="custom-content-below-settings" aria-selected="false">Settings</a>
+                                aria-controls="custom-content-below-settings"
+                                aria-selected="false">Dependentes/Parentes</a>
                         </li>
                     </ul>
                     <div class="tab-content" id="custom-content-below-tabContent">
+
+
                         <div class="tab-pane fade active show" id="custom-content-below-home" role="tabpanel"
                             aria-labelledby="custom-content-below-home-tab">
 
                             <form>
-                                <div class="form-group mt-5">
-                                    <label for="cargo">Nome completo <span class="text-danger"
-                                        title="campo obrigatório preencher">*</span></label>
+                                <div class="form-group mt-4">
+                                    <label for="cargo" class="mb-0">Nome completo <span class="text-danger"
+                                            title="campo obrigatório preencher">*</span></label>
                                     <input type="text" class="form-control form-control-sm" id="cargo"
                                         placeholder="Ex:. 0323211565">
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-3">
-                                        <label for="inputCity">Data Nascimento <span class="text-danger"
-                                            title="campo obrigatório preencher">*</span></label>
-                                        <input type="date" class="form-control form-control-sm" placeholder="01/05/1980">
+                                        <label for="inputCity" class="mb-0">Data Nascimento <span class="text-danger"
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <input type="date" class="form-control form-control-sm"
+                                            placeholder="01/05/1980">
                                     </div>
 
                                     <div class="form-group col-md-3">
-                                        <label for="inputCity">CPF <span class="text-danger"
-                                            title="campo obrigatório preencher">*</span></label>
-                                        <input type="text" class="form-control form-control-sm" placeholder="315156494898">
+                                        <label for="inputCity" class="mb-0">CPF <span class="text-danger"
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <input type="text" class="form-control form-control-sm"
+                                            placeholder="315156494898">
                                     </div>
 
                                     <div class="form-group col-md-3">
-                                        <label for="inputZip">RG <span class="text-danger"
-                                            title="campo obrigatório preencher">*</span></label>
-                                        <input type="text" class="form-control form-control-sm" placeholder="12315616546">
+                                        <label for="inputZip" class="mb-0">RG <span class="text-danger"
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <input type="text" class="form-control form-control-sm"
+                                            placeholder="12315616546">
                                     </div>
                                     <div class="form-group col-md-3">
-                                        <label for="inputState">Sexo <span class="text-danger"
-                                            title="campo obrigatório preencher">*</span></label>
+                                        <label for="inputState" class="mb-0">Sexo <span class="text-danger"
+                                                title="campo obrigatório preencher">*</span></label>
                                         <select id="inputState" class="form-control form-control-sm">
                                             <option selected>Selecione...</option>
                                             <option>...</option>
@@ -136,20 +142,137 @@
 
                                 <div class="form-row">
                                     <div class="form-group col-md-2">
+                                        <label for="inputCity" class="mb-0">CEP <span class="text-danger"
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <input type="text" class="form-control form-control-sm"
+                                            placeholder="00000-000">
+                                    </div>
+
+                                    <div class="form-group col-md-8">
+                                        <label for="inputCity" class="mb-0">Logradouro <span class="text-danger"
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <input type="text" class="form-control form-control-sm"
+                                            placeholder="Rua palace">
+                                    </div>
+
+                                    <div class="form-group col-md-2">
+                                        <label for="inputZip" class="mb-0">Nº <span class="text-danger"
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <input type="text" class="form-control form-control-sm" placeholder="146">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-5">
+                                        <label for="inputCity" class="mb-0">Bairro <span class="text-danger"
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <input type="text" class="form-control form-control-sm"
+                                            placeholder="00000-000">
+                                    </div>
+
+                                    <div class="form-group col-md-5">
+                                        <label for="inputCity" class="mb-0">Municipio <span class="text-danger"
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <input type="text" class="form-control form-control-sm"
+                                            placeholder="Rua palace">
+                                    </div>
+
+                                    <div class="form-group col-md-2">
+                                        <label for="inputZip" class="mb-0">Estado <span class="text-danger"
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <input type="text" class="form-control form-control-sm" placeholder="146">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="area_descricao" class="mb-0">Observação</label>
+                                    <textarea class="form-control" id="area_descricao" rows="2"></textarea>
+                                </div>
+                            </form>
+
+                        </div>
+
+
+                        <div class="tab-pane fade" id="custom-content-below-profile" role="tabpanel"
+                            aria-labelledby="custom-content-below-profile-tab">
+
+                            <form>
+                                <div class="form-row mt-4">
+                                    <div class="form-group col-md-6">
+                                        <label for="ctps" class="mb-0">CTPS <span class="text-danger"
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <input type="text" class="form-control form-control-sm"
+                                            placeholder="215611656566">
+                                    </div>
+
+                                    <div class="form-group col-md-6">
+                                        <label for="pis" class="mb-0">PIS <span class="text-danger"
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <input type="text" class="form-control form-control-sm"
+                                            placeholder="315156494898">
+                                    </div>
+
+                                    <div class="form-group col-md-3">
+                                        <label for="inputZip" class="mb-0">Data Admissão <span class="text-danger"
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <input type="date" class="form-control form-control-sm"
+                                            placeholder="{{ date('d/m/Y') }}">
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="empresa" class="mb-0">Empresa <span class="text-danger"
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <select id="empresa" class="form-control form-control-sm">
+                                            <option selected>Selecione...</option>
+                                            <option>UPA São João</option>
+                                            <option>UPA Cumbica</option>
+                                            <option>P.A Maria Dirce</option>
+                                            <option>HMCA</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="cargo" class="mb-0">Designação/Cargo <span
+                                                class="text-danger"
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <select id="cargo" class="form-control form-control-sm">
+                                            <option selected>Selecione...</option>
+                                            <option>Enfermagem</option>
+                                            <option>Serviço Social</option>
+                                            <option>Administração</option>
+                                            <option>Manutenção</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group col-md-3">
+                                        <label for="departamento" class="mb-0">Departamento/Setor <span
+                                                class="text-danger"
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <select id="departamento" class="form-control form-control-sm">
+                                            <option selected>Selecione...</option>
+                                            <option>Administração</option>
+                                            <option>Serviço Social</option>
+                                            <option>Administração</option>
+                                            <option>Manutenção</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-2">
                                         <label for="inputCity">CEP <span class="text-danger"
-                                            title="campo obrigatório preencher">*</span></label>
-                                        <input type="text" class="form-control form-control-sm" placeholder="00000-000">
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <input type="text" class="form-control form-control-sm"
+                                            placeholder="00000-000">
                                     </div>
 
                                     <div class="form-group col-md-8">
                                         <label for="inputCity">Logradouro <span class="text-danger"
-                                            title="campo obrigatório preencher">*</span></label>
-                                        <input type="text" class="form-control form-control-sm" placeholder="Rua palace">
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <input type="text" class="form-control form-control-sm"
+                                            placeholder="Rua palace">
                                     </div>
 
                                     <div class="form-group col-md-2">
                                         <label for="inputZip">Nº <span class="text-danger"
-                                            title="campo obrigatório preencher">*</span></label>
+                                                title="campo obrigatório preencher">*</span></label>
                                         <input type="text" class="form-control form-control-sm" placeholder="146">
                                     </div>
                                 </div>
@@ -157,63 +280,169 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-5">
                                         <label for="inputCity">Bairro <span class="text-danger"
-                                            title="campo obrigatório preencher">*</span></label>
-                                        <input type="text" class="form-control form-control-sm" placeholder="00000-000">
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <input type="text" class="form-control form-control-sm"
+                                            placeholder="00000-000">
                                     </div>
 
                                     <div class="form-group col-md-5">
                                         <label for="inputCity">Municipio <span class="text-danger"
-                                            title="campo obrigatório preencher">*</span></label>
-                                        <input type="text" class="form-control form-control-sm" placeholder="Rua palace">
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <input type="text" class="form-control form-control-sm"
+                                            placeholder="Rua palace">
                                     </div>
 
                                     <div class="form-group col-md-2">
                                         <label for="inputZip">Estado <span class="text-danger"
-                                            title="campo obrigatório preencher">*</span></label>
+                                                title="campo obrigatório preencher">*</span></label>
                                         <input type="text" class="form-control form-control-sm" placeholder="146">
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="area_descricao">Observação</label>
-                                    <textarea class="form-control" id="area_descricao" rows="4"></textarea>
                                 </div>
                             </form>
 
                         </div>
-                        <div class="tab-pane fade" id="custom-content-below-profile" role="tabpanel"
-                            aria-labelledby="custom-content-below-profile-tab">
-                            Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris pharetra purus ut
-                            ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-                            cubilia Curae; Maecenas sollicitudin, nisi a luctus interdum, nisl ligula placerat mi, quis
-                            posuere purus ligula eu lectus. Donec nunc tellus, elementum sit amet ultricies at, posuere
-                            nec nunc. Nunc euismod pellentesque diam.
-                        </div>
+
+
+
+
                         <div class="tab-pane fade" id="custom-content-below-messages" role="tabpanel"
                             aria-labelledby="custom-content-below-messages-tab">
-                            Morbi turpis dolor, vulputate vitae felis non, tincidunt congue mauris. Phasellus volutpat
-                            augue id mi placerat mollis. Vivamus faucibus eu massa eget condimentum. Fusce nec hendrerit
-                            sem, ac tristique nulla. Integer vestibulum orci odio. Cras nec augue ipsum. Suspendisse ut
-                            velit condimentum, mattis urna a, malesuada nunc. Curabitur eleifend facilisis velit finibus
-                            tristique. Nam vulputate, eros non luctus efficitur, ipsum odio volutpat massa, sit amet
-                            sollicitudin est libero sed ipsum. Nulla lacinia, ex vitae gravida fermentum, lectus ipsum
-                            gravida arcu, id fermentum metus arcu vel metus. Curabitur eget sem eu risus tincidunt
-                            eleifend ac ornare magna.
+
+                            <form>
+                                <div class="form-group mt-4">
+                                    <label for="empresa" class="mb-0">Banco <span class="text-danger"
+                                            title="campo obrigatório preencher">*</span></label>
+                                    <select id="empresa" class="form-control form-control-sm">
+                                        <option selected>Selecione...</option>
+                                        <option>001 - Banco do Brasil</option>
+                                        <option>002 - Banco Bradesco</option>
+                                        <option>003 - Banco Itaú</option>
+                                        <option>004 - Banco Santander</option>
+                                    </select>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="ctps" class="mb-0">Agência <span class="text-danger"
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <input type="text" class="form-control form-control-sm"
+                                            placeholder="215611656566">
+                                    </div>
+
+                                    <div class="form-group col-md-6">
+                                        <label for="pis" class="mb-0">Conta Corrente <span class="text-danger"
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <input type="text" class="form-control form-control-sm"
+                                            placeholder="315156494898">
+                                    </div>
+
+                                </div>
+                            </form>
+
+
                         </div>
                         <div class="tab-pane fade" id="custom-content-below-settings" role="tabpanel"
                             aria-labelledby="custom-content-below-settings-tab">
-                            Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis tempus
-                            turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque tincidunt venenatis
-                            vulputate. Morbi euismod molestie tristique. Vestibulum consectetur dolor a vestibulum
-                            pharetra. Donec interdum placerat urna nec pharetra. Etiam eget dapibus orci, eget aliquet
-                            urna. Nunc at consequat diam. Nunc et felis ut nisl commodo dignissim. In hac habitasse
-                            platea dictumst. Praesent imperdiet accumsan ex sit amet facilisis.
+                            <form>
+                                <div class="form-row mt-4">
+                                    <div class="form-group col-md-5">
+                                        <label for="inputCity" class="mb-0">Nome Completo <span class="text-danger"
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <input type="text" class="form-control form-control-sm"
+                                            placeholder="Jhon Doe">
+                                    </div>
+
+                                    <div class="form-group col-md-3">
+                                        <label for="dt_nasc" class="mb-0">Data Nascimento <span
+                                                class="text-danger"
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <input type="date" class="form-control form-control-sm">
+                                    </div>
+
+                                    <div class="form-group col-md-2">
+                                        <label for="empresa" class="mb-0">Parentesco <span class="text-danger"
+                                                title="campo obrigatório preencher">*</span></label>
+                                        <select id="empresa" class="form-control form-control-sm">
+                                            <option selected>Selecione...</option>
+                                            <option>Filho(a)</option>
+                                            <option>Esposo(a)</option>
+                                            <option>Pai/Mãe</option>
+                                            <option>Outros</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col">
+                                        <a href="#" class="btn btn-sm btn-primary pb-0 mt-4">
+                                            <i class="fas fa-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <hr>
+
+                            <div class="card-body p-0">
+                                <table class="table-sm table table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Nome</th>
+                                            <th>Data Nascimento</th>
+                                            <th>Parentesco</th>
+                                            <th>Idade</th>
+                                            <th>Ações disponíveis</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Fábio Ramos</td>
+                                            <td>18/04/2011</td>
+                                            <td>Filho</td>
+                                            <td>5 Anos</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="#"
+                                                        class="btn btn-sm btn-link text-decoration-none py-0"
+                                                        title="exlcuir">
+                                                        <i class="fas fa-trash text-danger"></i>
+                                                    </a>
+                                                    <a href="#" wire:click="edit(1)"
+                                                        class="btn btn-sm btn-link text-decoration-none py-0"
+                                                        title="alterar">
+                                                        <i class="fas fa-pen"></i>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Paulo Henrique Ganso</td>
+                                            <td>01/06/2019</td>
+                                            <td>Filho</td>
+                                            <td>4 Anos</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="#"
+                                                        class="btn btn-sm btn-link text-decoration-none py-0"
+                                                        title="exlcuir">
+                                                        <i class="fas fa-trash text-danger"></i>
+                                                    </a>
+                                                    <a href="#"
+                                                        class="btn btn-sm btn-link text-decoration-none py-0"
+                                                        title="alterar">
+                                                        <i class="fas fa-pen"></i>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary" wire:click="save">Salvar</button>
+                <div class="modal-footer py-1">
+                    <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-sm btn-primary" wire:click="save">Salvar</button>
                 </div>
             </div>
         </div>
