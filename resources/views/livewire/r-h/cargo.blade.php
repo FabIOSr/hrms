@@ -26,8 +26,8 @@
                                 <td>02126156166</td>
                                 <td>
                                     <div class="btn-group">
-                                        <a href="#" class="btn btn-sm btn-link text-decoration-none py-0"
-                                            title="exlcuir">
+                                        <a href="#" wire:click="delete"
+                                            class="btn btn-sm btn-link text-decoration-none py-0" title="exlcuir">
                                             <i class="fas fa-trash text-danger"></i>
                                         </a>
                                         <a href="#" wire:click="edit(1)"
@@ -107,6 +107,22 @@
             </div>
         </div>
     </div>
+
+    {{-- delete modal --}}
+    <div class="modal fade bg-secondary py-5" data-backdrop="static" tabindex="-1" role="dialog" id="delete">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content rounded-3 shadow">
+            <div class="modal-body p-4 text-center">
+              <h5 class="mb-0 text-dark">Enable this setting?</h5>
+              <p class="mb-0 text-dark">You can always change your mind in your account settings.</p>
+            </div>
+            <div class="modal-footer flex-nowrap p-0">
+              <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0 border-end"><strong>Yes, enable</strong></button>
+              <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0" data-dismiss="modal">No thanks</button>
+            </div>
+          </div>
+        </div>
+      </div>
 </div>
 
 @push('_js')
@@ -116,6 +132,10 @@
         })
         window.addEventListener('updateModal', e => {
             $('#cargo').modal('show');
+        })
+
+        window.addEventListener('deleteModal', e => {
+            $('#delete').modal('show');
         })
     </script>
 @endpush

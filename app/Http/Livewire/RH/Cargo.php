@@ -19,6 +19,11 @@ class Cargo extends Component
         $this->dispatchBrowserEvent('updateModal', []);
     }
 
+    public function delete()
+    {
+        $this->dispatchBrowserEvent('deleteModal');
+    }
+
     public function save()
     {
         $this->dispatchBrowserEvent('closeModal', []);

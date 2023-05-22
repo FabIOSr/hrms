@@ -36,6 +36,10 @@
                                             class="btn btn-sm btn-link text-decoration-none py-0" title="alterar">
                                             <i class="fas fa-pen"></i>
                                         </a>
+                                        <a href="#" class="btn btn-sm btn-link text-decoration-none py-0"
+                                            data-toggle="modal" data-target="#information">
+                                            <i class="fas fa-info-circle"></i>
+                                        </a>
                                     </div>
                                 </td>
                             </tr>
@@ -53,6 +57,11 @@
                                         <a href="#" class="btn btn-sm btn-link text-decoration-none py-0"
                                             title="alterar">
                                             <i class="fas fa-pen"></i>
+                                        </a>
+                                        <a href="javascript:void()"
+                                            class="btn btn-sm btn-link text-decoration-none py-0" title="alterar"
+                                            data-bs-toggle="modal" data-bs-target="#information">
+                                            <i class="fas fa-info-circle"></i>
                                         </a>
                                     </div>
                                 </td>
@@ -111,7 +120,8 @@
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-3">
-                                        <label for="inputCity" class="mb-0">Data Nascimento <span class="text-danger"
+                                        <label for="inputCity" class="mb-0">Data Nascimento <span
+                                                class="text-danger"
                                                 title="campo obrigatório preencher">*</span></label>
                                         <input type="date" class="form-control form-control-sm"
                                             placeholder="01/05/1980">
@@ -443,6 +453,231 @@
                 <div class="modal-footer py-1">
                     <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Cancelar</button>
                     <button type="button" class="btn btn-sm btn-primary" wire:click="save">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="information3" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+
+                <div class="card-body p-0">
+                    <div class="invoice p-3 mb-3">
+
+                        <div class="row">
+                            <div class="col-12">
+                                <h4>
+                                    <i class="fas fa-globe"></i> AdminLTE, Inc.
+                                    <small class="float-right">Date: {{ date('d/m/Y') }}</small>
+                                </h4>
+                            </div>
+
+                        </div>
+
+                        <div class="row invoice-info">
+                            <div class="col-sm-4 invoice-col">
+                                Dados Pessoais
+                                <address>
+                                    <strong>Jhon Doe</strong><br>
+                                    795 Folsom Ave, Suite 600<br>
+                                    San Francisco, CA 94107<br>
+                                    Telefone: (11) 12314-5432<br>
+                                    Email: info@almasaeedstudio.com
+                                </address>
+                            </div>
+
+                            <div class="col-sm-4 invoice-col">
+                                <strong>Dados empregatícios</strong>
+                                <address>
+                                    <strong>Técnico de enfermagem</strong><br>
+                                    795 Folsom Ave, Suite 600<br>
+                                    San Francisco, CA 94107<br>
+                                    Phone: (555) 539-1037<br>
+                                    Email: john.doe@example.com
+                                </address>
+                            </div>
+
+                            <div class="col-sm-4 invoice-col">
+                                <b>Matricula #007612</b><br>
+                                <br>
+                                <b>Admissão:</b> 2/22/2014<br>
+                                <b>Account:</b> 968-34567
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-6 table-responsive">
+                                <table class="table table-striped table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>Nome</th>
+                                            <th>Data Nasc</th>
+                                            <th>Idade</th>
+                                            <th>Parentesco</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Call of Duty</td>
+                                            <td>455-981-221</td>
+                                            <td>1</td>
+                                            <td>El snort testosterone</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Need for Speed IV</td>
+                                            <td>247-925-726</td>
+                                            <td>1</td>
+                                            <td>Wes Anderson umami biodiesel</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="col-6 table-responsive">
+                                <table class="table table-striped table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>Periodo</th>
+                                            <th>Situação</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>18/12/2023 a 15/01/2024</td>
+                                            <td>A vencer</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1/01/2023 a 01/02/2023</td>
+                                            <td>Retirado</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-6">
+                                <p class="lead">Observação:</p>
+                                <p class="text-muted well well-sm shadow-none" style="margin-top: 10px;">
+                                    Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya
+                                    handango imeem
+                                    plugg
+                                    dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
+                                </p>
+                            </div>
+
+                            <div class="col-6">
+                                <p class="lead">Amount Due 2/22/2014</p>
+                                <div class="table-responsive">
+                                    <table class="table table-sm">
+                                        <tbody>
+                                            <tr>
+                                                <th style="width:50%">Subtotal:</th>
+                                                <td>$250.30</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Tax (9.3%)</th>
+                                                <td>$10.34</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Shipping:</th>
+                                                <td>$5.80</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row no-print">
+                            <div class="col-12">
+                                <a href="invoice-print.html" rel="noopener" target="_blank"
+                                    class="btn btn-primary float-right"><i class="fas fa-print"></i> Print</a>
+                                <button type="button" class="btn btn-secondary float-right" data-dismiss="modal"
+                                    style="margin-right: 5px;">
+                                    <i class="fas fa-signout"></i> Sair
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {{-- teste --}}
+    <div class="modal fade" id="information" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                
+                <div class="card">
+                    <div class="card-header d-flex p-0">
+                        <h3 class="card-title p-3">Formulario de cadastro</h3>
+                        <ul class="nav nav-pills ml-auto p-2">
+                            <li class="nav-item"><a class="nav-link active" href="#tab_1" data-toggle="tab">Dados Pessoais</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#tab_2" data-toggle="tab">Dados Empregaticios</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#tab_3" data-toggle="tab">Dados Bancários</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+                                    Dropdown <span class="caret"></span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" tabindex="-1" href="#">Dependentes</a>
+                                    <a class="dropdown-item" tabindex="-1" href="#">Férias</a>
+                                    <a class="dropdown-item" tabindex="-1" href="#">Advertências</a>
+                                    <a class="dropdown-item" tabindex="-1" href="#">Atestados</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" tabindex="-1" href="#" data-dismiss="modal">Cancelar</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab_1">
+                                A wonderful serenity has taken possession of my entire soul,
+                                like these sweet mornings of spring which I enjoy with my whole heart.
+                                I am alone, and feel the charm of existence in this spot,
+                                which was created for the bliss of souls like mine. I am so happy,
+                                my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
+                                that I neglect my talents. I should be incapable of drawing a single stroke
+                                at the present moment; and yet I feel that I never was a greater artist than now.
+                            </div>
+            
+                            <div class="tab-pane" id="tab_2">
+                                The European languages are members of the same family. Their separate existence is a myth.
+                                For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ
+                                in their grammar, their pronunciation and their most common words. Everyone realizes why a
+                                new common language would be desirable: one could refuse to pay expensive translators. To
+                                achieve this, it would be necessary to have uniform grammar, pronunciation and more common
+                                words. If several languages coalesce, the grammar of the resulting language is more simple
+                                and regular than that of the individual languages.
+                            </div>
+            
+                            <div class="tab-pane" id="tab_3">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                It has survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+                                sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                                like Aldus PageMaker including versions of Lorem Ipsum.
+                            </div>
+            
+                        </div>
+            
+                    </div>
                 </div>
             </div>
         </div>

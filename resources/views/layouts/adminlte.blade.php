@@ -17,7 +17,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="{{ asset('adminlte/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('adminlte/css/adminlte.min.css') }}">
-    @vite('resources/js/app.js')
+    @vite(['resources/js/app.js'])
     @livewireStyles
     @stack('_css')
 </head>
