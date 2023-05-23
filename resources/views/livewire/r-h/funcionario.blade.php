@@ -1,4 +1,5 @@
 <div>
+    @section('title', 'Funcionarios')
     <div class="row pt-3">
         <div class="col">
             <div class="card">

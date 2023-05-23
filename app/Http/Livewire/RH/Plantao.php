@@ -8,6 +8,8 @@ class Plantao extends Component
 {
     public function render()
     {
-        return view('livewire.r-h.plantao');
+        return view('livewire.r-h.plantao', [
+            'title' => 'Plantao'
+        ])->extends('layouts.adminlte');
     }
 }

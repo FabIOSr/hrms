@@ -1,4 +1,5 @@
 <div>
+    @section('title', 'Departamentos')
     {{-- @push('header')
     <div class="content-header">
         <div class="container-fluid">

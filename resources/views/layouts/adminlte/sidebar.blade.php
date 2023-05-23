@@ -97,13 +97,13 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('rh_plantao') }}" class="nav-link {{ request()->routeIs('rh_plantao') ? 'active': '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Plantão</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('rh_escala') }}" class="nav-link {{ request()->routeIs('rh_escala') ? 'active': '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Tipo de Escala</p>
                             </a>
