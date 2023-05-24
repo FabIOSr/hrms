@@ -5,19 +5,19 @@ use App\Http\Livewire\RH\{
     Escala,
     Ferias,
     Funcionario,
-    Plantao,
+    Turno,
 };
 
 use Illuminate\Support\Facades\Route;
 
 Route::group([
-    'prefix' => 'rh',
+    'prefix' => 'hr',
     'middleware' => 'auth'
 ], function(){
-    Route::get('/departamento', Departamento::class)->name('rh_departamento');
-    Route::get('/cargo', Cargo::class)->name('rh_cargo');
-    Route::get('/ferias', Ferias::class)->name('rh_ferias');
-    Route::get('/escala', Escala::class)->name('rh_escala');
-    Route::get('/plantao', Plantao::class)->name('rh_plantao');
-    Route::get('/funcionario', Funcionario::class)->name('rh_funcionario');
+    Route::get('/department', Departamento::class)->name('rh_departamento');
+    Route::get('/office', Cargo::class)->name('rh_cargo');
+    Route::get('/vocation', Ferias::class)->name('rh_ferias');
+    Route::get('/scale', Escala::class)->name('rh_escala');
+    Route::get('/shift', Turno::class)->name('rh_turno');
+    Route::get('/employee', Funcionario::class)->name('rh_funcionario');
 });

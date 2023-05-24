@@ -62,8 +62,8 @@
 
                 <li class="nav-header">RECURSOS HUMANO</li>
 
-                <li class="nav-item {{ request()->segment(1) == 'rh' ? 'menu-open': '' }}">
-                    <a href="#" class="nav-link {{ request()->segment(1) == 'rh' ? 'active': '' }}">
+                <li class="nav-item {{ request()->segment(1) == 'hr' ? 'menu-open': '' }}">
+                    <a href="#" class="nav-link {{ request()->segment(1) == 'hr' ? 'active': '' }}">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
                             Departamento RH
@@ -97,9 +97,9 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ route('rh_plantao') }}" class="nav-link {{ request()->routeIs('rh_plantao') ? 'active': '' }}">
+                            <a href="{{ route('rh_turno') }}" class="nav-link {{ request()->routeIs('rh_turno') ? 'active': '' }}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Plantão</p>
+                                <p>Turno</p>
                             </a>
                         </li>
                         <li class="nav-item">
