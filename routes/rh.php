@@ -14,7 +14,8 @@ Route::group([
     'prefix' => 'hr',
     'middleware' => 'auth'
 ], function(){
-    Route::get('/department', Departamento::class)->name('rh_departamento');
+    Route::view('/department', 'hr\department\index')->name('rh_departamento');
+    // Route::get('/department', Departamento::class)->name('rh_departamento');
     Route::get('/office', Cargo::class)->name('rh_cargo');
     Route::get('/vocation', Ferias::class)->name('rh_ferias');
     Route::get('/scale', Escala::class)->name('rh_escala');
