@@ -5,7 +5,7 @@
                 <div class="card-header d-flex">
                     <h6 class="m-0">Lista de colaboradores</h6>
                     <a href="#" class="btn btn-sm btn-link text-decoration-none py-0 float-right" data-toggle="modal"
-                        data-target="#create_employee" title="agendar ferias">
+                        data-target="#create_employee" title="Cadastrar novo colaborador">
                         <i class="fas fa-plus"></i>
                     </a>
                 </div>
