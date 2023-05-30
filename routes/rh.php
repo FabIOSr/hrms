@@ -20,5 +20,6 @@ Route::group([
     Route::get('/vocation', Ferias::class)->name('rh_ferias');
     Route::get('/scale', Escala::class)->name('rh_escala');
     Route::get('/shift', Turno::class)->name('rh_turno');
-    Route::get('/employee', Funcionario::class)->name('rh_funcionario');
+    // Route::get('/employee', Funcionario::class)->name('rh_funcionario');
+    Route::view('/employee', 'hr\employee\index')->name('rh_funcionario');
 });
