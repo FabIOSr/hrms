@@ -8,8 +8,7 @@
                 @if ($currentStep == 1)
                     <div class="card shadow-none border-0">
                         <div class="card-body">
-                            <strong>Passo-{{ $currentStep }} de {{ $totalStep }} / Dados Pessoais</strong>
-
+                            <strong>Passo {{ $currentStep }} de {{ $totalStep }} / Dados Pessoais</strong>
                             <hr>
 
                             <form autocomplete="off">
@@ -18,46 +17,48 @@
                                     <div class="form-group col-md-8">
                                         <label class="mb-0">Nome completo <span class="text-danger"
                                                 title="campo obrigatório preencher">*</span></label>
-                                        <input type="text" class="form-control form-control-sm" autocomplete="off">
+                                        <input type="text" wire:model="nome" class="form-control form-control-sm" autocomplete="off">
                                     </div>
 
                                     <div class="form-group col-md-4">
                                         <label class="mb-0">Data Nascimento <span class="text-danger"
                                                 title="campo obrigatório preencher">*</span></label>
-                                        <input type="date" class="form-control form-control-sm">
+                                        <input type="date" wire:model="nascimento" class="form-control form-control-sm">
                                     </div>
+                                </div>
 
+                                <div class="form-row">
                                     <div class="form-group col-md-3">
                                         <label class="mb-0">CPF <span class="text-danger"
                                                 title="campo obrigatório preencher">*</span></label>
-                                        <input type="text" class="form-control form-control-sm">
+                                        <input type="text" wire:model="cpf" class="form-control form-control-sm">
                                     </div>
 
                                     <div class="form-group col-md-3">
                                         <label class="mb-0">RG <span class="text-danger"
                                                 title="campo obrigatório preencher">*</span></label>
-                                        <input type="text" class="form-control form-control-sm">
+                                        <input type="text" wire:model="rg" class="form-control form-control-sm">
                                     </div>
 
                                     <div class="form-group col-md-3">
                                         <label class="mb-0">Sexo <span class="text-danger"
                                                 title="campo obrigatório preencher">*</span></label>
-                                        <select class="form-control form-control-sm">
-                                            <option selected disabled>...</option>
-                                            <option>Feminino</option>
-                                            <option>Masculino</option>
+                                        <select wire:model="sexo" class="form-control form-control-sm">
+                                            <option value="" selected>...</option>
+                                            <option value="F">Feminino</option>
+                                            <option value="M">Masculino</option>
                                         </select>
                                     </div>
 
                                     <div class="form-group col-md-3">
                                         <label class="mb-0">Estado Civil <span class="text-danger"
                                                 title="campo obrigatório preencher">*</span></label>
-                                        <select class="form-control form-control-sm">
-                                            <option selected disabled>...</option>
-                                            <option>Solteiro(a)</option>
-                                            <option>Casado(a)</option>
-                                            <option>Divorciado(a)</option>
-                                            <option>Viúvo(a)</option>
+                                        <select wire:model="est_civil" class="form-control form-control-sm">
+                                            <option selected>...</option>
+                                            <option value="solteiro">Solteiro(a)</option>
+                                            <option value="casado">Casado(a)</option>
+                                            <option value="divorciado">Divorciado(a)</option>
+                                            <option value="viuvo">Viúvo(a)</option>
                                         </select>
                                     </div>
                                 </div>
@@ -66,19 +67,19 @@
                                     <div class="form-group col-md-2">
                                         <label class="mb-0">CEP <span class="text-danger"
                                                 title="campo obrigatório preencher">*</span></label>
-                                        <input type="text" class="form-control form-control-sm">
+                                        <input type="text" wire:model="cep" class="form-control form-control-sm">
                                     </div>
 
                                     <div class="form-group col-md-8">
                                         <label class="mb-0">Logradouro <span class="text-danger"
                                                 title="campo obrigatório preencher">*</span></label>
-                                        <input type="text" class="form-control form-control-sm">
+                                        <input type="text" wire:model="logradouro" class="form-control form-control-sm">
                                     </div>
 
                                     <div class="form-group col-md-2">
                                         <label class="mb-0">Nº <span class="text-danger"
                                                 title="campo obrigatório preencher">*</span></label>
-                                        <input type="text" class="form-control form-control-sm">
+                                        <input type="text" wire:model="numero" class="form-control form-control-sm">
                                     </div>
                                 </div>
 
@@ -86,19 +87,19 @@
                                     <div class="form-group col-md-5">
                                         <label class="mb-0">Bairro <span class="text-danger"
                                                 title="campo obrigatório preencher">*</span></label>
-                                        <input type="text" class="form-control form-control-sm">
+                                        <input type="text" wire:model="bairro" class="form-control form-control-sm">
                                     </div>
 
                                     <div class="form-group col-md-5">
                                         <label class="mb-0">Municipio <span class="text-danger"
                                                 title="campo obrigatório preencher">*</span></label>
-                                        <input type="text" class="form-control form-control-sm">
+                                        <input type="text" wire:model="municipio" class="form-control form-control-sm">
                                     </div>
 
                                     <div class="form-group col-md-2">
                                         <label class="mb-0">Estado <span class="text-danger"
                                                 title="campo obrigatório preencher">*</span></label>
-                                        <input type="text" class="form-control form-control-sm">
+                                        <input type="text" wire:model="uf" class="form-control form-control-sm">
                                     </div>
                                 </div>
 
@@ -108,11 +109,13 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="modal-footer py-1">
-                            <button type="button" class="btn btn-sm btn-secondary"
-                                data-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-sm btn-outline-primary"
-                                wire:click="increment">Proximo</button>
+                        <div class="modal-footer py-1 d-flex justify-content-between">
+                            <button type="button" class="btn btn-sm bg-gradient-secondary"
+                                data-dismiss="modal" wire:click="onCancel">Cancelar</button>
+                            <div>
+                                <button type="button" class="btn btn-sm bg-gradient-primary"
+                                    wire:click="increment">Próximo</button>
+                            </div>
                         </div>
                     </div>
                 @endif
@@ -122,7 +125,7 @@
                 @if ($currentStep == 2)
                     <div class="card shadow-none border-0">
                         <div class="card-body">
-                            <strong>Passo-{{ $currentStep }} de {{ $totalStep }} / Dados Empregaticio</strong>
+                            <strong>Passo {{ $currentStep }} de {{ $totalStep }} / Dados Empregaticio</strong>
                             <hr>
                             <form>
                                 <div class="form-row mt-4">
@@ -153,7 +156,7 @@
                                     <div class="form-group col-md-4">
                                         <label class="mb-0">Empresa <span class="text-danger"
                                                 title="campo obrigatório preencher">*</span></label>
-                                        <select id="empresa" class="form-control form-control-sm">
+                                        <select class="form-control form-control-sm">
                                             <option selected disabled>...</option>
                                             <option>UPA São João</option>
                                             <option>UPA Cumbica</option>
@@ -164,7 +167,7 @@
                                     <div class="form-group col-md-4">
                                         <label class="mb-0">Designação/Cargo <span class="text-danger"
                                                 title="campo obrigatório preencher">*</span></label>
-                                        <select id="cargo" class="form-control form-control-sm">
+                                        <select class="form-control form-control-sm">
                                             <option selected disabled>...</option>
                                             <option>Enfermagem</option>
                                             <option>Serviço Social</option>
@@ -177,7 +180,7 @@
                                         <label for="departamento" class="mb-0">Departamento/Setor <span
                                                 class="text-danger"
                                                 title="campo obrigatório preencher">*</span></label>
-                                        <select id="departamento" class="form-control form-control-sm">
+                                        <select class="form-control form-control-sm">
                                             <option selected disabled>...</option>
                                             <option>Administração</option>
                                             <option>Serviço Social</option>
@@ -210,7 +213,7 @@
                                     <div class="form-group col-md-4">
                                         <label class="mb-0">Escala <span class="text-danger"
                                                 title="campo obrigatório preencher">*</span></label>
-                                        <select id="cargo" class="form-control form-control-sm">
+                                        <select class="form-control form-control-sm">
                                             <option selected disabled>...</option>
                                             <option>5x2</option>
                                             <option>12x36</option>
@@ -221,7 +224,7 @@
                                     <div class="form-group col-md-4">
                                         <label class="mb-0">Turno <span class="text-danger"
                                                 title="campo obrigatório preencher">*</span></label>
-                                        <select id="cargo" class="form-control form-control-sm">
+                                        <select class="form-control form-control-sm">
                                             <option selected disabled>...</option>
                                             <option>Diurno</option>
                                             <option>Diurno A</option>
@@ -234,7 +237,7 @@
 
                                     <div class="form-group col-md-4">
                                         <label class="mb-0">Plantão</label>
-                                        <select id="cargo" class="form-control form-control-sm">
+                                        <select class="form-control form-control-sm">
                                             <option selected disabled>...</option>
                                             <option>Impar</option>
                                             <option>Par</option>
@@ -250,13 +253,15 @@
                             </form>
 
                         </div>
-                        <div class="modal-footer py-1">
-                            <button type="button" class="btn btn-sm btn-secondary"
-                                data-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary"
-                                wire:click="decrement">Anterior</button>
-                            <button type="button" class="btn btn-sm btn-outline-primary"
-                                wire:click="increment">Próximo</button>
+                        <div class="modal-footer py-1 d-flex justify-content-between">
+                            <button type="button" class="btn btn-sm btn-secondary bg-gradient-secondary"
+                                data-dismiss="modal" wire:click="onCancel">Cancelar</button>
+                            <div>
+                                <button type="button" class="btn btn-sm bg-gradient-warning"
+                                    wire:click="decrement">Anterior</button>
+                                <button type="button" class="btn btn-sm bg-gradient-primary"
+                                    wire:click="increment">Próximo</button>
+                            </div>
                         </div>
                     </div>
                 @endif
@@ -266,7 +271,7 @@
                 @if ($currentStep == 3)
                     <div class="card shadow-none border-0">
                         <div class="card-body">
-                            <strong>Passo-{{ $currentStep }} de {{ $totalStep }} / Dados Bancário</strong>
+                            <strong>Passo {{ $currentStep }} de {{ $totalStep }} / Dados Bancário</strong>
                             <hr>
                             <form autocomplete="off">
                                 <div class="form-row mt-4">
@@ -296,13 +301,15 @@
                             </form>
                         </div>
                     </div>
-                    <div class="modal-footer py-1">
-                        <button type="button" class="btn btn-sm btn-secondary"
-                            data-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary"
-                            wire:click="decrement">Anterior</button>
-                        <button type="button" class="btn btn-sm btn-outline-primary"
-                            wire:click="increment">Próximo</button>
+                    <div class="modal-footer py-1 d-flex justify-content-between">
+                        <button type="button" class="btn btn-sm bg-gradient-secondary"
+                            data-dismiss="modal" wire:click="onCancel">Cancelar</button>
+                        <div>
+                            <button type="button" class="btn btn-sm bg-gradient-warning"
+                                wire:click="decrement">Anterior</button>
+                            <button type="button" class="btn btn-sm bg-gradient-primary"
+                                wire:click="increment">Próximo</button>
+                        </div>
                     </div>
                 @endif
 
@@ -311,7 +318,7 @@
                 @if ($currentStep == 4)
                     <div class="card shadow-none border-0">
                         <div class="card-body">
-                            <strong>Passo-{{ $currentStep }} de {{ $totalStep }} / Dados dependentes</strong>
+                            <strong>Passo {{ $currentStep }} de {{ $totalStep }} / Dados dependentes</strong>
                             <hr>
 
                             <form>
@@ -331,8 +338,8 @@
                                     <div class="form-group col-md-2">
                                         <label class="mb-0">Parentesco <span class="text-danger"
                                                 title="campo obrigatório preencher">*</span></label>
-                                        <select id="empresa" class="form-control form-control-sm">
-                                            <option selected>Selecione...</option>
+                                        <select class="form-control form-control-sm">
+                                            <option selected disabled>...</option>
                                             <option>Filho(a)</option>
                                             <option>Esposo(a)</option>
                                             <option>Pai/Mãe</option>
@@ -340,7 +347,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group col">
-                                        <a href="#" class="btn btn-sm btn-primary pb-0 mt-4">
+                                        <a href="#" class="btn btn-sm bg-gradient-primary pb-0 mt-4">
                                             <i class="fas fa-plus"></i>
                                         </a>
                                     </div>
@@ -411,19 +418,19 @@
 
 
                         </div>
-                        <div class="modal-footer py-1">
-                            <button type="button" class="btn btn-sm btn-secondary"
-                                data-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary"
-                                wire:click="decrement">Anterior</button>
-                            <button type="button" class="btn btn-sm btn-outline-primary" wire:click="save">Salvar
-                                informações</button>
+                        <div class="modal-footer py-1 d-flex justify-content-between">
+                            <button type="button" class="btn btn-sm bg-gradient-secondary"
+                                data-dismiss="modal" wire:click="onCancel">Cancelar</button>
+                            <div>
+                                <button type="button" class="btn btn-sm bg-gradient-warning"
+                                    wire:click="decrement">Anterior</button>
+                                <button type="button" class="btn btn-sm bg-gradient-primary"
+                                    wire:click="save">Salvar
+                                    informações</button>
+                            </div>
                         </div>
                     </div>
                 @endif
-
-
-
             </div>
         </div>
     </div>
