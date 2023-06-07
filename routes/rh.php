@@ -22,4 +22,5 @@ Route::group([
     Route::get('/shift', Turno::class)->name('rh_turno');
     // Route::get('/employee', Funcionario::class)->name('rh_funcionario');
     Route::view('/employee', 'hr\employee\index')->name('rh_funcionario');
+    Route::view('/journey', 'hr\journey\index')->name('rh_journey');
 });

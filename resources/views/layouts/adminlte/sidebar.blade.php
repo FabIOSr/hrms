@@ -80,9 +80,9 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('rh_escala') }}" class="nav-link {{ request()->routeIs('rh_escala') ? 'active': '' }}">
+                            <a href="{{ route('rh_journey') }}" class="nav-link {{ request()->routeIs('rh_journey') ? 'active': '' }}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Tipo de Escala</p>
+                                <p>Jornada de Trabalho</p>
                             </a>
                         </li>
                     </ul>
