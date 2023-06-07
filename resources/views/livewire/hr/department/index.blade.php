@@ -10,52 +10,44 @@
                     </a>
                 </div>
                 <div class="card-body p-0">
-                    <table class="table-sm table table-striped table-hover">
+                    <table class="table-sm table table-striped table-hover mb-2">
                         <thead>
                             <tr>
                                 <th>#</th>
                                 <th>Nome</th>
                                 <th>Centro de custo</th>
+                                <th>Situação</th>
                                 <th>Ações disponíveis</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach($data as $dep)
                             <tr>
-                                <td>1</td>
-                                <td>Administração {{ date('s') }}</td>
-                                <td>02126156166</td>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $dep->departamento_nome }}</td>
+                                <td>{{ $dep->custo }}</td>
+                                <td>{{ $dep->situacao }}</td>
                                 <td>
                                     <div class="btn-group">
-                                        <a href="#" wire:click="$emit('deleteConfirm',3)" class="btn btn-sm btn-link text-decoration-none py-0"
+                                        <a href="#" wire:click="$emit('deleteConfirm',{{ $dep->id }})" class="btn btn-sm btn-link text-decoration-none py-0"
                                             title="exlcuir">
-                                            <i class="fas fa-trash text-danger"></i>
+                                            <i class="fas fa-trash-alt text-danger"></i>
                                         </a>
-                                        <a href="#" wire:click="$emit('edit',3)"
+                                        <a href="#" wire:click="$emit('edit',{{ $dep->id }})"
                                             class="btn btn-sm btn-link text-decoration-none py-0" title="alterar">
                                             <i class="fas fa-pen"></i>
                                         </a>
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Assistência de Enfermagem</td>
-                                <td>02126156161</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <a href="#" class="btn btn-sm btn-link text-decoration-none py-0"
-                                            title="exlcuir">
-                                            <i class="fas fa-trash text-danger"></i>
-                                        </a>
-                                        <a href="#" wire:click="$emit('edit', 2)" class="btn btn-sm btn-link text-decoration-none py-0"
-                                            title="alterar">
-                                            <i class="fas fa-pen"></i>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
+                    <div class="row justify-content-center">
+                        {{ $data->links() }}
+                    </div>
+
+                    
                 </div>
             </div>
         </div>

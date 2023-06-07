@@ -7,10 +7,10 @@
                     <p class="mb-0 text-dark">Está certo que realmente quer excluir este registro?.</p>
                 </div>
                 <div class="modal-footer flex-nowrap p-0">
-                    <button type="button" wire:click="delete"
-                        class="btn btn-lg  fs-6 text-decoration-none btn-link col-6 m-0 rounded-0 border-end"><strong>Excluir</strong></button>
                     <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0"
                         data-dismiss="modal">Cancelar</button>
+                    <button type="button" wire:click="delete"
+                        class="btn btn-lg  fs-6 text-decoration-none btn-link col-6 m-0 rounded-0 border-end text-danger"><strong>Excluir</strong></button>
                 </div>
             </div>
         </div>

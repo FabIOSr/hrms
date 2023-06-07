@@ -10,36 +10,25 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form autocomplete="off">
                         <div class="form-group">
-                            <label for="nome_departamento">Nome Departamento <span class="text-danger"
+                            <label for="departamento_nome">Nome Departamento <span class="text-danger"
                                     title="campo obrigatório preencher">*</span></label>
-                            <input type="email" class="form-control form-control-sm" id="nome_departamento"
-                                placeholder="Ex:. Administração">
+                            <input type="text" wire:model.lazy="name" class="form-control form-control-sm" id="departamento_nome"
+                                placeholder="ex: Administrativo" autocomplete="off">
+                            @error('name') <span class="text-danger text-sm">{{ $message }}</span> @enderror
                         </div>
                         <div class="form-group">
-                            <label for="nome_departamento">Centro de Custo</label>
-                            <input type="email" class="form-control form-control-sm" id="nome_departamento"
-                                placeholder="Ex:. 0323211565">
-                        </div>
-                        <div class="form-group">
-                            <label for="situacao">Situação <span class="text-danger"
-                                    title="campo obrigatório preencher">*</span></label>
-                            <select class="form-control form-control-sm" id="situacao">
-                                <option selected>Selecione</option>
-                                <option>Ativo</option>
-                                <option>Inativo</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="area_descricao">Descrição</label>
-                            <textarea class="form-control" id="area_descricao" rows="2"></textarea>
+                            <label for="centro_custo">Centro de Custo</label>
+                            <input type="text" wire:model.lazy="c_custo" class="form-control form-control-sm" id="centro_custo"
+                                placeholder="ex: 0323211565" autocomplete="off">
+                            @error('c_custo') <span class="text-danger text-sm">{{ $message }}</span> @enderror
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary" wire:click="save">Salvar</button>
+                    <button type="button" class="btn btn-primary" wire:click="store">Salvar</button>
                 </div>
             </div>
         </div>
