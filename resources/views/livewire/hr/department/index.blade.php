@@ -24,9 +24,9 @@
                             @foreach($data as $dep)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $dep->departamento_nome }}</td>
+                                <td class="text-bold">{{ $dep->departamento_nome }}</td>
                                 <td>{{ $dep->custo }}</td>
-                                <td>{{ $dep->situacao }}</td>
+                                <td><span class="pt-1 badge badge-{{ $dep->situacao == 'ATIVO' ? 'success': 'danger' }}">{{ $dep->situacao }}</span></td>
                                 <td>
                                     <div class="btn-group">
                                         <a href="#" wire:click="$emit('deleteConfirm',{{ $dep->id }})" class="btn btn-sm btn-link text-decoration-none py-0"
@@ -35,7 +35,7 @@
                                         </a>
                                         <a href="#" wire:click="$emit('edit',{{ $dep->id }})"
                                             class="btn btn-sm btn-link text-decoration-none py-0" title="alterar">
-                                            <i class="fas fa-pen"></i>
+                                            <i class="fas fa-edit"></i>
                                         </a>
                                     </div>
                                 </td>

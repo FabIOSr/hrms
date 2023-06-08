@@ -32,7 +32,7 @@ class Create extends Component
         $this->resetUI();
 
         $this->emit('load_department');
-        $this->dispatchBrowserEvent('closeModal', ['create']);
+        $this->emit('created', ["create", "Departamento criado com sucesso!"]);
     }
 
     private function resetUI(){

@@ -14,7 +14,7 @@ class Delete extends Component
     public function deleteConfirm($id)
     {
         $this->selected_id  = $id;
-        $this->dispatchBrowserEvent('deleteModal');
+        $this->emit("show-modal", "delete");
     }
 
     
@@ -27,7 +27,7 @@ class Delete extends Component
             $dept->delete();
 
         $this->emit('load_department');
-        $this->dispatchBrowserEvent('closeModal',['delete']);
+        $this->emit('deleted', ["delete", "Registro removido"]);
     }
 
     

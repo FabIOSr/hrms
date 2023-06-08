@@ -32,11 +32,11 @@
                                     <div class="btn-group">
                                         <a href="#" class="btn btn-sm btn-link text-decoration-none py-0"
                                             title="exlcuir">
-                                            <i class="fas fa-trash text-danger"></i>
+                                            <i class="fas fa-trash-alt text-danger"></i>
                                         </a>
                                         <a href="#" wire:click="edit(1)"
                                             class="btn btn-sm btn-link text-decoration-none py-0" title="alterar">
-                                            <i class="fas fa-pen"></i>
+                                            <i class="fas fa-edit"></i>
                                         </a>
                                     </div>
                                 </td>
@@ -51,11 +51,11 @@
                                     <div class="btn-group">
                                         <a href="#" class="btn btn-sm btn-link text-decoration-none py-0"
                                             title="exlcuir">
-                                            <i class="fas fa-trash text-danger"></i>
+                                            <i class="fas fa-trash-alt text-danger"></i>
                                         </a>
                                         <a href="#" class="btn btn-sm btn-link text-decoration-none py-0"
                                             title="alterar">
-                                            <i class="fas fa-pen"></i>
+                                            <i class="fas fa-edit"></i>
                                         </a>
                                     </div>
                                 </td>

@@ -24,6 +24,7 @@ class Update extends Component
         $this->selected_id = $dept->id;
 
         $this->dispatchBrowserEvent('updateModal');
+        $this->emit('show-modal', "update");
     }
 
     public function update()
@@ -50,7 +51,7 @@ class Update extends Component
         $dept->save();
 
         $this->emit('load_department');
-        $this->dispatchBrowserEvent('closeModal', ['update']);
+        $this->emit('updated', ["update", "Registro foi atualizado!"]);
         
     }
 
