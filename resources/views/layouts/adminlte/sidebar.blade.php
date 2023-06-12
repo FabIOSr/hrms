@@ -14,7 +14,7 @@
         <div class="user-panel py-2 mb-3 d-flex">
             <div class="info">
                 <a href="#" class="d-block">
-                    {{ Auth::user()->name }}
+                    {{ Auth::user()->name ?? 'Visitante' }}
                 </a>
             </div>
         </div>

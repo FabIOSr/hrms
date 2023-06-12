@@ -2,12 +2,19 @@
     <div class="row pt-3">
         <div class="col">
             <div class="card">
-                <div class="card-header d-flex">
-                    <h6 class="m-0">Lista de departamento</h6>
-                    <a href="#" class="btn btn-sm btn-link text-decoration-none py-0 float-right" data-toggle="modal"
-                        data-target="#create" title="novo departamento">
-                        <i class="fas fa-plus"></i>
-                    </a>
+                <div class="card-header">
+                    <div class="row justify-content-between">
+                        <div class="col-sm-12 col-md-6">
+                            <h6 class="m-0">Departamento | Lista</h6>                    
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <a href="#" class="btn btn-sm btn-link text-decoration-none py-0 float-right" data-toggle="modal"
+                                data-target="#create" title="novo departamento">
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
+                        <x-search />
+                    </div>
                 </div>
                 <div class="card-body p-0">
                     <table class="table-sm table table-striped table-hover mb-2">

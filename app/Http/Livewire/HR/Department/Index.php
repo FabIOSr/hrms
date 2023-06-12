@@ -14,12 +14,19 @@ class Index extends Component
     
     protected $listeners = ['load_department' => '$refresh'];
 
+    public $search;
+
     private $pagination = 5;
 
 
     public function render()
     {
-        $data = Departamento::orderBy('departamento_nome','ASC')->paginate($this->pagination);
+        $data = Departamento::query()->orderBy('departamento_nome','ASC');
+        if($this->search):
+            $this->resetPage();
+            $data = $data->where('departamento_nome', 'like', '%'.$this->search.'%');
+        endif;
+        $data = $data->paginate($this->pagination);
         return view('livewire.hr.department.index', ['data'=> $data]);
     }
 }

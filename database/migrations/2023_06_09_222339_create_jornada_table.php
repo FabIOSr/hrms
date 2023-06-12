@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cargo', function (Blueprint $table) {
+        Schema::create('jornada', function (Blueprint $table) {
             $table->id();
-            $table->string('cbo');
-            $table->string('cargo_nome')->nullable();
-            $table->string('carga_horaria')->nullable();
-            $table->string('descricao')->nullable();
-            $table->enum('situacao', ['ATIVO','INATIVO'])->default('ATIVO');
+            $table->string('jornada');
+            $table->string('carga_horaria_semanal')->nullable();
+            $table->string('carga_horaria_mensal')->nullable();
+            $table->enum('situacao',['ativo', 'inativo'])->default('ativo');
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cargo');
+        Schema::dropIfExists('jornada');
     }
 };

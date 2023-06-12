@@ -2,15 +2,25 @@
     <div class="row pt-3">
         <div class="col">
             <div class="card">
-                <div class="card-header d-flex">
-                    <h6 class="m-0">Lista de escala</h6>
-                    <a href="#" class="btn btn-sm btn-link text-decoration-none py-0 float-right" data-toggle="modal"
-                        data-target="#journey_create">
-                        <i class="fas fa-plus"></i>
-                    </a>
+                <div class="card-header">
+                    <div class="row justify-content-between">
+                        
+                        <div class="col-sm-12 col-md-6">
+                            <h6 class="m-0">Escala | Lista</h6>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <a href="#" class="btn btn-sm btn-link text-decoration-none py-0 float-right" data-toggle="modal"
+                                data-target="#journey_create">
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>                        
+                        <x-search />
+                        
+                    </div>
                 </div>
                 <div class="card-body p-0">
-                    <table class="table-sm table table-striped table-hover">
+                    <div class="responsive">
+                        <table class="table-sm table table-striped table-hover">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -22,15 +32,16 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach($jornada as $j)
                             <tr>
-                                <td>1</td>
-                                <td>5x2</td>
-                                <td>42</td>
-                                <td>220</td>
-                                <td>ATIVO</td>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $j->jornada }}</td>
+                                <td>{{ $j->carga_horaria_semanal }}</td>
+                                <td>{{ $j->carga_horaria_mensal }}</td>
+                                <td>{{ strtoupper($j->situacao) }}</td>
                                 <td>
                                     <div class="btn-group">
-                                        <a href="#" class="btn btn-sm btn-link text-decoration-none py-0"
+                                        <a href="#"  wire:click="$emit('deleteConfirm',{{ $j->id }})" class="btn btn-sm btn-link text-decoration-none py-0"
                                             title="exlcuir">
                                             <i class="fas fa-trash-alt text-danger"></i>
                                         </a>
@@ -41,27 +52,10 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>12x36</td>
-                                <td>24</td>
-                                <td>96</td>
-                                <td>INATIVO</td>
-                                <td width="150">
-                                    <div class="btn-group">
-                                        <a href="#" class="btn btn-sm btn-link text-decoration-none py-0"
-                                            title="exlcuir">
-                                            <i class="fas fa-trash-alt text-danger"></i>
-                                        </a>
-                                        <a href="#" class="btn btn-sm btn-link text-decoration-none py-0"
-                                            title="alterar">
-                                            <i class="fas fa-edit"></i>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
+                    </div>
                 </div>
             </div>
         </div>

@@ -12,11 +12,11 @@
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <label class="mb-0">Tipo Jornada <span class="text-danger"
+                        <label class="mb-0">Jornada <span class="text-danger"
                                 title="campo obrigatório preencher">*</span></label>
-                        <input type="text" wire:model="tipo" class="form-control form-control-sm"
+                        <input type="text" wire:model="jornada" class="form-control form-control-sm"
                             placeholder="ex: 5x2">
-                        @error('tipo')
+                        @error('jornada')
                             <span class="text-sm text-danger">{{ $message }}</span>
                         @enderror
                     </div>
@@ -25,20 +25,22 @@
                         <label class="mb-0">Carga Horária Semanal <span class="text-danger"
                                 title="campo obrigatório preencher">*</span></label>
                         <input type="number" wire:model="chs"
-                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            {{-- oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength) @set('chs', this.value);" --}}
                             class="form-control form-control-sm" placeholder="ex: 12" maxlength="2">
                         @error('chs')
                             <span class="text-sm text-danger">{{ $message }}</span>
                         @enderror
                     </div>
                 </form>
-                <span wire:loading wire:target="store" class="text-primary fw-bold text-center">Aguarde processando...</span>
 
             </div>
             <div class="modal-footer">
-                <button type="button" wire:click="resetUI" class="btn btn-secondary"
+                <button type="button" wire:click="resetUI" wire:loading.attr="disabled" class="btn btn-secondary"
                     data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary" wire:click.prevent="store">Salvar</button>
+                <button type="button" class="btn btn-primary" wire:click.prevent="store">
+                    <span wire:loading wire:target="store">Processando...</span>
+                    <span wire:loading.remove wire:target="store">Salvar</span>
+                </button>
             </div>
         </div>
     </div>
